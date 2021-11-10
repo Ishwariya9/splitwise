@@ -1,0 +1,23 @@
+<html>
+<head><center><h1> EXPENSE MANAGER </center></head>
+<title>splitwise</title>
+<script LANGUAGE="JavaScript" type="text/javascript">
+function display() {
+  DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=400,height=400')
+if(document.form1.expense.value!=0)
+{  
+message = "<ul><li><b>SPLIT PER PERSON: </b>" + (document.form1.expense.value/document.form1.no_of_persons.value);
+  + "</ul>";
+}
+  DispWin.document.write(message);
+}
+</script>
+<body bgcolor='yellow'>
+<form name="form1" >
+expense:<input type="number" name="expense"></br></br>
+no.of persons: <input type="number" name="no_of_persons"></br></br>
+<p><input TYPE="BUTTON" VALUE="Display my share" onClick="display();"></p>
+<a href="pay.html">pay</a>
+</form>
+</body>
+</html>
